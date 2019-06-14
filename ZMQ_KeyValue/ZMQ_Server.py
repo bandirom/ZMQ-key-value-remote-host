@@ -1,13 +1,16 @@
 import pickle
 import json
 import zmq
+import socket as s
 
+MyIp = s.gethostbyname(s.gethostname()) # 192.168.1.102
+print(MyIp)
+Port = 43000
 def run_daemon():
     memory = {}
-
     context = zmq.Context()
     socket = context.socket(zmq.REP)
-    socket.bind('tcp://192.168.1.102:43000')
+    socket.bind('tcp://' + MyIp + ':' + str(Port))
 
     while True:
         try:
