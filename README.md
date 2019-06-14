@@ -1,4 +1,4 @@
-# ZMQ-key-value-remote-host
+# ZMQ key/value remote host
 
   `sudo apt-get install libzmq-dev`
   
